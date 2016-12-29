@@ -49,7 +49,6 @@ header {
   }
 
   nav {
-
     .dropdown{
       &:after {
         content: ' ▶';
@@ -62,8 +61,13 @@ header {
     }
 
     ul {
+      background: #336799;
+      width: 100%;
       a {
-        padding-right: 40px;
+        display: block;
+        height: 76px;
+        padding-right: 20px;
+        padding-left: 20px;
         font-family: @header-navigation-type-font-family;
         font-size: @header-navigation-type-font-size;
         font-weight: @header-navigation-type-font-weight;
@@ -77,55 +81,54 @@ header {
       }
       -webkit-font-smoothing:antialiased;
       list-style: none;
-      margin-top: 10px !important;
-      padding: 0px 0px 0px 0px;
-      float: right;
+      padding: 0px 0px 0px 45px;
 
        li {
+        height: 68px;
+        &.nav-selected, &.nav-path-selected {
+          background: #4378aa;
+        }
+
         &:hover {
+          background: #4378aa;
           ul {
             opacity: 1;
-            top: 30px;
+            top: 50px;
             visibility: visible;
           }
         }
         margin: 0;
-        padding: 0;
-        padding-bottom: 10px;
+        padding-top: 10px;
         position: relative;
         display: inline-block;
         ul {
           li {
-            &:hover {
-              a {
-                color: @header-navigation-menu-text-hover-color;
-              }
+            border-bottom: 1px solid @header-navigation-menu-border-color;
+            &:last-child {
+              border-bottom: none;
+            }
+            &:hover, &.nav-selected {
+              background: #4378aa;
             }
             a {
-              &:hover {
-                color: @header-navigation-menu-text-hover-color;
-              }
               display: block;
-              padding-bottom: 15px;
-              font-size: 1.0em;
               text-transform: none;
               color: @header-navigation-menu-text-color;
               .transition(all .25s ease);
-              font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-              font-weight: normal;
+              display: block;
+              height: 52px;
             }
             float: none;
             width: 100%;
             padding-bottom: 0px;
           }
           cursor: pointer;
-          padding: 15px;
-          padding-bottom: 0px;
+          padding: 0;
           float: left;
           left: 0;
           opacity: 0;
           position: absolute;
-          top: 20px;
+          top: 100px;
           visibility: hidden;
           width: 200px;
           background-color: @header-navigation-menu-background-color;
@@ -137,4 +140,10 @@ header {
       }
     }
   }
+}
+
+.ccm-responsive-navigation {
+  clear: both;
+  height: 76px;
+  background: #61a4e5;
 }
