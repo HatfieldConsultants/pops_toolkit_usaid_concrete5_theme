@@ -1,10 +1,10 @@
 <?php
-namespace Concrete\Theme\Usaid;
+namespace Application\Theme\Usaid;
 
 use Concrete\Core\Area\Layout\Preset\Provider\ThemeProviderInterface;
 use Concrete\Core\Page\Theme\Theme;
 
-class PageTheme extends Theme implements ThemeProviderInterface
+class PageTheme extends \Concrete\Core\Page\Theme\Theme implements ThemeProviderInterface
 {
     public function registerAssets()
     {
