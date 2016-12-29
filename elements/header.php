@@ -9,12 +9,12 @@ $displayThirdColumn = $blocks > 0 || $c->isEditMode();
 
 <header class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-xs-6">
       <a href="#/home" class="">
         <img src="<?php echo $this->getThemePath(); ?>/images/logo.png" width="200px" style="margin-bottom: 15px;">
       </a>
     </div>
-    <div class="col-md-6 text-right USAIDLogo">
+    <div class="col-xs-6 text-right USAIDLogo">
       <a href="https://www.usaid.gov">
         <img src="https://www.usaid.gov/sites/all/themes/usaid/logo.png" alt="U.S. Agency for International Development">
       </a>
