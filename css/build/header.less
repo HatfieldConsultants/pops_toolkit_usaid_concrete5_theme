@@ -96,7 +96,7 @@ header {
           background: #4378aa;
           ul {
             opacity: 1;
-            top: 50px;
+            top: 68px;
             visibility: visible;
           }
         }
@@ -110,13 +110,19 @@ header {
             &:last-child {
               border-bottom: none;
             }
+
             &:hover, &.nav-selected {
+              a {
+                color: white;
+              }
+
               background: #4378aa;
             }
+
             a {
               display: block;
               text-transform: none;
-              color: @header-navigation-menu-text-color;
+              color: #336799;
               .transition(all .25s ease);
               display: block;
               height: 52px;
@@ -131,14 +137,12 @@ header {
           left: 0;
           opacity: 0;
           position: absolute;
-          top: 100px;
+          top: 68px;
           visibility: hidden;
           width: 200px;
-          background-color: @header-navigation-menu-background-color;
+          background-color: #eee;
           z-index: 99;
           .transition(all .25s ease);
-          .border-radius(3px);
-          border: 1px solid @header-navigation-menu-border-color;
         }
       }
     }
