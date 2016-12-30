@@ -7,8 +7,8 @@ $blocks = $as->getTotalBlocksInArea();
 $displayThirdColumn = $blocks > 0 || $c->isEditMode();
 ?>
 
-<header class="container">
-  <div class="row">
+<header>
+  <div class="container">
     <div class="col-xs-6">
       <a href="/" class="">
         <img src="<?php echo $this->getThemePath(); ?>/images/logo.png" width="200px" style="margin-bottom: 15px;">
@@ -20,10 +20,12 @@ $displayThirdColumn = $blocks > 0 || $c->isEditMode();
       </a>
     </div>
   </div>
-    <div class="row">
+  <div class="navbar">
+    <div class="container">
       <?php
       $a = new GlobalArea('Header Navigation');
       $a->display();
       ?>
     </div>
+  </div>
 </header>

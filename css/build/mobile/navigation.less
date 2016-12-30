@@ -67,7 +67,7 @@
 .ccm-responsive-menu-launch {
   display: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 4px;
   float: right;
   &.responsive-button-close {
     position: absolute;
@@ -94,7 +94,7 @@
       font-size: 30px;
       content: "\f0c9";
       font-family: FontAwesome;
-      color: #336799;
+      color: white;
       font-weight: normal;
       font-style: normal;
       display: inline-block;
@@ -114,14 +114,19 @@
     display: none;
   }
 
-  header {
-    .ccm-search-block-form {
-      margin-top: 20px;
+  div.ccm-page {
+    header {
+      .ccm-search-block-form {
+        margin-top: 20px;
+      }
+
+      .navbar {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
     }
   }
-
-
-
 }
 
 @media all and (min-width: @screen-xs-max) {

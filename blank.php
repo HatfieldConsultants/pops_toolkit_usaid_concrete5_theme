@@ -14,3 +14,4 @@ $this->inc('elements/header_top.php');
 
 <?php
 $this->inc('elements/footer_bottom.php');
+?>
