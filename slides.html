@@ -1,0 +1,144 @@
+<html lang="en" id="slides-page" class=" webkit static-section w-1700 lt-1680 lt-1920 js  gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions fontface domloaded"><head>
+    <title>POPsToolkit Template</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/white.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/0.96/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+    <style>
+      .toc div {
+        width: 1250px;
+      }
+
+      .toc div div {
+        height: 180px;
+        width: 300px;
+        float: left;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+      }
+    </style>
+    <script>
+      $(function() {
+        Reveal.initialize({
+          controls: false,
+          progress: false,
+          history: true,
+          center: false,
+          loop: true
+        })
+        $('.toc div div').click(function() {
+          var url = location.href;
+          var scrollTop = $(window.parent.document).scrollTop();
+          location.href = "#" + $(this).attr('id') + "_slide";
+          window.parent.scrollTo(0, scrollTop);
+        });
+      })
+    </script>
+    <meta charset="utf-8">
+  </head>
+  <body marginwidth="0" marginheight="0">
+    <div class="reveal slide" role="application" data-transition-speed="default" data-background-transition="fade">
+      <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.514286);">
+        <section class="toc stack present" style="display: block;">
+          <section class="present" style="display: block;">
+            <div style="margin-left: -200px">
+              <div id="pf" style="background: #8064a2; cursor: pointer;">Problem Formulation</div>
+              <div id="ea" style="background: #8064a2; cursor: pointer;">Exposure Assessment</div>
+              <div id="ta" style="background: #8064a2; cursor: pointer;">Toxicity Assessment</div>
+              <div id="rc" style="background: #8064a2; cursor: pointer;">Risk Characterization</div>
+            </div>
+            <div>
+              <div style="background: #b3a2c7; width: 550px; height: 500px">
+                <ul>
+                  <li>Develop Conceptual Site Model</li>
+                  <li>Identify Receptors/Pathways of Concern</li>
+                  <li>Select Assessment/Measurement Endpoints (Ecological Only)</li>
+                  <li>Identify Chemicals of Potential Concern</li>
+                </ul>
+              </div>
+              <div style="background: #f79646;">Develop Risk-Based PRGs</div>
+            </div>
+          </section>
+          <section id="pf_slide" class="future" aria-hidden="true" hidden="" style="display: block;">
+            <h1>Problem Formulation</h1>
+          </section>
+          <section class="future" aria-hidden="true" hidden="" style="display: block;">
+            <h3>Problem Formulation</h3>
+            <p>
+            Risk assessments start off very simple, using a minimum of data, making simple assumptions and using simple calculations. At this initial stage, all assumptions should err on the side of caution. If the earliest iterations of the risk assessment predicts elevated risk, it doesn't necessarily mean that there is elevated risk, but additional work needs to be done to refine the risk assessment. In Canada, the earliest iteration is called a Preliminary Quantitative Risk Assessment (PQRA) (Health Canada 2004). Subsequent refinements are often called Detailed Site-Specific Risk Assessments.
+            </p>
+          </section>
+          <section id="ea_slide" class="future" aria-hidden="true" hidden="" style="display: none;">
+            <h1>Exposure Assessment</h1>
+          </section>
+          <section class="future" aria-hidden="true" hidden="" style="display: none;">
+            <h3>Exposure Assessment</h3>
+            <p>
+            Risk assessments start off very simple, using a minimum of data, making simple assumptions and using simple calculations. At this initial stage, all assumptions should err on the side of caution. If the earliest iterations of the risk assessment predicts elevated risk, it doesn't necessarily mean that there is elevated risk, but additional work needs to be done to refine the risk assessment. In Canada, the earliest iteration is called a Preliminary Quantitative Risk Assessment (PQRA) (Health Canada 2004). Subsequent refinements are often called Detailed Site-Specific Risk Assessments.
+            </p>
+          </section>
+          <section id="ta_slide" class="future" aria-hidden="true" hidden="" style="display: none;">
+            <h1>Toxicity Assessment</h1>
+          </section>
+          <section class="future" aria-hidden="true" hidden="" style="display: none;">
+            <h3>Toxicity Assessment</h3>
+            <p>
+            Risk assessments start off very simple, using a minimum of data, making simple assumptions and using simple calculations. At this initial stage, all assumptions should err on the side of caution. If the earliest iterations of the risk assessment predicts elevated risk, it doesn't necessarily mean that there is elevated risk, but additional work needs to be done to refine the risk assessment. In Canada, the earliest iteration is called a Preliminary Quantitative Risk Assessment (PQRA) (Health Canada 2004). Subsequent refinements are often called Detailed Site-Specific Risk Assessments.
+            </p>
+          </section>
+          <section id="rc_slide" class="future" aria-hidden="true" hidden="" style="display: none;">
+            <h1>Risk Characterization</h1>
+          </section>
+          <section class="future" aria-hidden="true" hidden="" style="display: none;">
+            <h3>Risk Characterization</h3>
+            <p>
+            Risk assessments start off very simple, using a minimum of data, making simple assumptions and using simple calculations. At this initial stage, all assumptions should err on the side of caution. If the earliest iterations of the risk assessment predicts elevated risk, it doesn't necessarily mean that there is elevated risk, but additional work needs to be done to refine the risk assessment. In Canada, the earliest iteration is called a Preliminary Quantitative Risk Assessment (PQRA) (Health Canada 2004). Subsequent refinements are often called Detailed Site-Specific Risk Assessments.
+            </p>
+          </section>
+        </section>
+        <section class="toc future" hidden="" aria-hidden="true" style="display: block;">
+          <div style="margin-left: -200px">
+            <div class="fragment shrink" style="background: #4f81bd;" data-fragment-index="0">Start with long list of sites</div>
+            <div class="fragment shrink" style="background: #4f81bd;" data-fragment-index="1">Pre-Screening &amp; Prioritization of multiple sites</div>
+            <div class="fragment shrink" style="background: #4f81bd;" data-fragment-index="2">[Single Study Site Selected]</div>
+            <div class="fragment shrink" style="background: #4f81bd;" data-fragment-index="3">Initial Planning and Scoping</div>
+          </div>
+          <div style="margin-left: -200px">
+            <div class="fragment shrink" style="background: #9bbb59;" data-fragment-index="4">Field Investigation</div>
+            <div class="fragment shrink" style="background: #8064a2;" data-fragment-index="5">Risk Assessment</div>
+            <div class="fragment shrink" style="background: #f79646;" data-fragment-index="6">Risk Management</div>
+            <div class="fragment shrink" style="background: #4f81bd;" data-fragment-index="7">Monitoring and Evaluation</div>
+          </div>
+        </section>
+      </div>
+    <div class="backgrounds"><div class="slide-background toc stack present" data-loaded="true" style="display: block;"><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="slide-background toc future" data-loaded="true" style="display: block;"></div></div><div class="progress" style="display: none;"><span></span></div><aside class="controls" style="display: none;"><button class="navigate-left enabled" aria-label="previous slide"></button><button class="navigate-right enabled" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide"></button><button class="navigate-down enabled" aria-label="below slide"></button></aside><div class="slide-number" style="display: block;"><span class="slide-number-a">1</span><span class="slide-number-delimiter">.</span><span class="slide-number-b">1</span></div><div class="speaker-notes" data-prevent-swipe=""></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px);">
+            
+              Problem Formulation
+              Exposure Assessment
+              Toxicity Assessment
+              Risk Characterization
+            
+            
+              
+                
+                  Develop Conceptual Site Model
+                  Identify Receptors/Pathways of Concern
+                  Select Assessment/Measurement Endpoints (Ecological Only)
+                  Identify Chemicals of Potential Concern
+                
+              
+              Develop Risk-Based PRGs
+            
+          </div></div>
+  
+
+</body></html>
