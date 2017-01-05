@@ -1,5 +1,5 @@
 <?php
-namespace Application\Theme\Usaid;
+namespace Concrete\Package\Usaid\Theme\Usaid;
 
 use Concrete\Core\Area\Layout\Preset\Provider\ThemeProviderInterface;
 use Concrete\Core\Page\Theme\Theme;
