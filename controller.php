@@ -3,12 +3,13 @@ namespace Concrete\Package\Usaid;
 
 use Concrete\Core\Package\Package;
 use Concrete\Core\Page\Theme\Theme;
+use Concrete\Core\Block\BlockType\BlockType;
 
 defined('C5_EXECUTE') or die("Access Denied.");
 
 class Controller extends Package
 {
-  protected $pkgHandle = 'theme_usaid';
+  protected $pkgHandle = 'usaid';
   protected $appVersionRequired = '5.7.1';
   protected $pkgVersion = '1.0';
 
@@ -26,5 +27,8 @@ class Controller extends Package
   {
       $pkg = parent::install();
       Theme::add('usaid', $pkg);
+
+      // Get 'Class does not exist' error when trying to install this
+      // BlockType::installBlockType('search', $pkg);
   }
 }
