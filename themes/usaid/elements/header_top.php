@@ -24,7 +24,27 @@
             document.querySelector('head').appendChild(msViewportStyle);
         }
     </script>
+    <script src="/packages/usaid/themes/usaid/FileSaver.js"></script>
+    <script src="/packages/usaid/themes/usaid/Blob.js"></script>
+    <script src="/packages/usaid/themes/usaid/html-docx.js"></script>
+    <script>
+      $(function() {
+        $('#word').detach().insertBefore('.page-title');
+        $('#word').click(function() {
+          var converted = htmlDocx.asBlob($('main').html())
+          saveAs(converted, 'test.docx');
+        });
+      });
+    </script>
+    <style>
+      #word {
+        width: 30px; 
+        height: 30px; 
+        float: right; 
+        cursor: pointer;
+        margin-top: 50px;
+      }
+    </style>
 </head>
 <body>
-
 <div class="<?php echo $c->getPageWrapperClass()?>">
