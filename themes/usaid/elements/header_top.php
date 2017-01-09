@@ -29,7 +29,7 @@
     <script src="/packages/usaid/themes/usaid/html-docx.js"></script>
     <script>
       $(function() {
-        $('#word').detach().insertBefore('.page-title');
+        $('#word').detach().insertBefore('.page-title').fadeIn();
         $('#word').click(function() {
           var converted = htmlDocx.asBlob($('main').html())
           saveAs(converted, 'test.docx');
@@ -43,6 +43,7 @@
         float: right; 
         cursor: pointer;
         margin-top: 50px;
+        display: none;
       }
     </style>
 </head>
