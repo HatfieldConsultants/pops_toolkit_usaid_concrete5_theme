@@ -11,15 +11,15 @@ $this->inc('elements/header.php');
     $a->display($c);
     ?>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 col-sidebar">
+            <div class="col-md-2 col-sidebar">
                 <?php
                 $a = new Area('Sidebar');
                 $a->display($c);
                 ?>
             </div>
-            <div class="col-md-8 col-sm-offset-1 col-content">
+            <div class="col-md-10 col-content">
                 <?php
                 $a = new Area('Main');
                 $a->setAreaGridMaximumColumns(12);
