@@ -26,7 +26,8 @@
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/packages/usaid/themes/usaid/FileSaver.js"></script>
+    <script src="/packages/usaid/themes/usaid/presentation-mode.js"></script>
+	<script src="/packages/usaid/themes/usaid/FileSaver.js"></script>
     <script src="/packages/usaid/themes/usaid/Blob.js"></script>
     <script src="/packages/usaid/themes/usaid/html-docx.js"></script>
     <script>

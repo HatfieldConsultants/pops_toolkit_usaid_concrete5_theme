@@ -27,7 +27,6 @@ class Controller extends Package
   {
       $pkg = parent::install();
       Theme::add('usaid', $pkg);
-
       // Get 'Class does not exist' error when trying to install this
       // BlockType::installBlockType('search', $pkg);
   }
