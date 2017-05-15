@@ -20,7 +20,8 @@ var _usePseudoFullscreen = false;
 function isFullscreen () {
 	return (document.fullScreenElement && document.fullScreenElement !== null)
          || document.mozFullScreen
-         || document.webkitIsFullScreen;
+         || document.webkitIsFullScreen
+         || (window.innerHeight == screen.height);
 }
 
 function _onKeypress(e) {

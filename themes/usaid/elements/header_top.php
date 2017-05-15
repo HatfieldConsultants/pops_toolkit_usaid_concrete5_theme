@@ -26,10 +26,15 @@
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
     <script src="/packages/usaid/themes/usaid/presentation-mode.js"></script>
-	<script src="/packages/usaid/themes/usaid/FileSaver.js"></script>
+    <script src="/packages/usaid/themes/usaid/FileSaver.js"></script>
     <script src="/packages/usaid/themes/usaid/Blob.js"></script>
     <script src="/packages/usaid/themes/usaid/html-docx.js"></script>
+    <script src="/packages/usaid/themes/usaid/jquery.panelslider.js"></script>
+    <script src="/packages/usaid/themes/usaid/usaid.js"></script>
+	
     <script>
       $(function() {
         $('#word').detach().insertBefore('.page-title').fadeIn();
@@ -47,6 +52,51 @@
         cursor: pointer;
         margin-top: 50px;
         display: none;
+      }
+      main {
+        transition: transform .2s;
+      }
+      
+      /* Slide page 200px to the right when panel is opened */
+      main.ps-active {
+        transform: translateX(-800px);
+      }
+      
+      /* Position panel */
+      #panel {
+        position: absolute;
+        top: 0;
+        right: -1000px;
+        width: 800px;
+        height: 100%;  /* remember to set 100% height for all its parents too, including html and body */
+        background-color: #fff;
+        transform: translateX(-200px);
+        z-index: 999;
+        display: none;
+      }
+      .pullout {
+      display: table;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 30px;
+      height: 100%;
+
+      }
+      .pullout-tab {
+        display: table-cell;
+        vertical-align: middle;
+        background: #336799;
+        width: 30px;
+        height: 200px;
+      }
+      .draft {
+      position: absolute;
+      left: 40%;
+      font-size: 20px;
+      z-index: 999;
+      color: red;
+      font-weight: bold;
       }
     </style>
 </head>

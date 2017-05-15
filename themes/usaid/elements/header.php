@@ -6,7 +6,6 @@ $as = new GlobalArea('Header Search');
 $blocks = $as->getTotalBlocksInArea();
 $displayThirdColumn = $blocks > 0 || $c->isEditMode();
 ?>
-
 <header>
   <div class="container">
     <div class="row">
@@ -15,6 +14,7 @@ $displayThirdColumn = $blocks > 0 || $c->isEditMode();
         <img src="<?php echo $this->getThemePath(); ?>/images/POPs Toolkit_Logo_340x50.png" width="340px" style="margin-bottom: 15px;">
       </a>
     </div>
+    <p class="draft">The content of this site is draft only. Do not use.</p>
     <div class="col-xs-6 text-right usaid-logo">
       <a href="https://www.usaid.gov">
         <img src="https://www.usaid.gov/sites/all/themes/usaid/logo.png" alt="U.S. Agency for International Development">

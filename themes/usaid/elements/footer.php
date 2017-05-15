@@ -27,14 +27,7 @@ $displayFirstSection = $footerSiteTitleBlocks > 0 || $footerSocialBlocks > 0 || 
     <div class="col-md-12 footerlinks">
       <div class="container">
         
-          <p>
-            <small>
-               <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Accessibility</a>
-            </small>
-          </p>
-          <small>
-            The information provided on this website is not official U.S. government information and does not represent the views or positions of the U.S. Agency for International Development or the U.S. Government.
-          </small>
+
         
       </div>
     

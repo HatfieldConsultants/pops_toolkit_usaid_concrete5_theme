@@ -3,8 +3,8 @@
 </div>
 
 <?php View::element('footer_required'); ?>
-<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.5'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+<script src="/packages/usaid/themes/usaid/manifest.js"></script>
+<script src="/packages/usaid/themes/usaid/vendor.js"></script>
+<script src="/packages/usaid/themes/usaid/hq.js"></script>
 </body>
 </html>
