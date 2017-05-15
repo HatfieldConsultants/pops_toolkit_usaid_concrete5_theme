@@ -9,7 +9,7 @@ function wordExport() {
   $('#word').click(function() {
     compiling = $('<p class="alert alert-warning">Compiling content... this make take some time</p>')
     $('.page-title').after(compiling)
-    html = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"></head><body>'
+    html = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>body { font-family: Arial; } p { font-family: Arial; } div.ccm-page h1 { font-size: 14px; color: #ba0c2f;  }</style></head><body>'
     calls = []
     path = window.location.pathname.split('/')[2]
 
