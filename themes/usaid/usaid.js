@@ -9,18 +9,23 @@ function wordExport() {
   $('#word').click(function() {
     compiling = $('<p class="alert alert-warning">Compiling content... this make take some time</p>')
     $('.page-title').after(compiling)
-    html = ''
+    html = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"></head><body>'
     calls = []
     path = window.location.pathname.split('/')[2]
 
     $.get('/index.php/site-map', function(data) {
       $(data).find('main ul.nav > li > a[href*=' + path + ']').parent().find('a').each(function(i,e) { 
-        calls.push($.get($(e).attr('href'), function(data) {
-          html += $(data).find('main').remove('.nav').html() 
-        }))
+        calls.push($.get($(e).attr('href')))
       })
 
-      $.when(...calls).then(function() {
+      $.when(...calls).done(function() {
+        for (var i = 0; i < arguments.length; i++) {
+          dom = $(arguments[i][0]).find('main').clone()
+          dom.find('.nav').remove()
+          html += dom.html()
+        }
+        html += '</body></html>'
+          
         converted = htmlDocx.asBlob(html)
         saveAs(converted, path + '.docx')
         compiling.remove()
@@ -40,13 +45,4 @@ function displayContext() {
   $('#panel').on('psClose', function(e) {
       $('#panel').hide()
   })
-
-  /*
-  setTimeout(function () {
-      $('.pullout-tab').click()
-      setTimeout(function () {
-          $.panelslider.close()
-      }, 1000)
-  }, 1000);
-  */
 }
