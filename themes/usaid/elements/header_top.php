@@ -35,15 +35,6 @@
     <script src="/packages/usaid/themes/usaid/jquery.panelslider.js"></script>
     <script src="/packages/usaid/themes/usaid/usaid.js"></script>
 	
-    <script>
-      $(function() {
-        $('#word').detach().insertBefore('.page-title').fadeIn();
-        $('#word').click(function() {
-          var converted = htmlDocx.asBlob($('main').html())
-          saveAs(converted, 'test.docx');
-        });
-      });
-    </script>
     <style>
       #word {
         width: 30px; 
