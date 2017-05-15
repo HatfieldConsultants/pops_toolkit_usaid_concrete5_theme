@@ -21,7 +21,7 @@ function wordExport() {
       $.when(...calls).done(function() {
         for (var i = 0; i < arguments.length; i++) {
           dom = $(arguments[i][0]).find('main').clone()
-          dom.find('.nav').remove()
+          dom.find('.col-sidebar').remove()
           html += dom.html()
         }
         html += '</body></html>'
