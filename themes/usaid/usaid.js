@@ -7,7 +7,7 @@
 function wordExport() {
   $('#word').detach().insertBefore('.page-title').fadeIn();
   $('#word').click(function() {
-    compiling = $('<p>Compiling content... this make take some time</p>')
+    compiling = $('<p class="alert alert-warning">Compiling content... this make take some time</p>')
     $('.page-title').after(compiling)
     html = ''
     calls = []
@@ -16,7 +16,7 @@ function wordExport() {
     $.get('/index.php/site-map', function(data) {
       $(data).find('main ul.nav > li > a[href*=' + path + ']').parent().find('a').each(function(i,e) { 
         calls.push($.get($(e).attr('href'), function(data) {
-          html += $(data).find('main').html() 
+          html += $(data).find('main').remove('.nav').html() 
         }))
       })
 
