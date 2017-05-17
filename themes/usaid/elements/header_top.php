@@ -26,7 +26,7 @@
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
     <script src="/packages/usaid/themes/usaid/presentation-mode.js"></script>
     <script src="/packages/usaid/themes/usaid/FileSaver.js"></script>
@@ -88,6 +88,11 @@
       z-index: 999;
       color: red;
       font-weight: bold;
+      }
+      
+      div.ccm-block-page-list-page-entry-thumbnail img {
+        height: 250px;
+        width: 330px;
       }
     </style>
 </head>
