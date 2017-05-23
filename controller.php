@@ -12,7 +12,7 @@ class Controller extends Package
 {
   protected $pkgHandle = 'usaid';
   protected $appVersionRequired = '5.7.1';
-  protected $pkgVersion = '1.0.3';
+  protected $pkgVersion = '1.0.7';
 
   public function getPackageDescription()
   {
@@ -34,5 +34,12 @@ class Controller extends Package
     parent::upgrade();
     $pkg = Package::getByHandle('usaid');
     SinglePage::add('/all_pages', $pkg);
+    if ($pkg->getPackageVersion() == '1.0.7') {
+      $bt = \Concrete\Core\Block\BlockType\BlockType::getByHandle('popstoolkitleftnav');
+      if (!is_object($bt)) {
+        $bt = \Concrete\Core\Block\BlockType\BlockType::installBlockTypeFromPackage('popstoolkitleftnav', $pkg);
+      }
+    }
+
   }
 }
