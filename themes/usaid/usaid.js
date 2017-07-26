@@ -86,7 +86,7 @@ function displayContextModal(imagePathArr) {
     // Add the modal block and popover button.
     if (isFound){
         imgPath = loc.protocol + '//' + loc.host + pathCheck.imgPath;
-        $img = $('<img src="'+ imgPath +'" />');
+        $img = $('<img src="'+ imgPath +'" class="full-width"/>');
         content = $img;
     
         // Modal block

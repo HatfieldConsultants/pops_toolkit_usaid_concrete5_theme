@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="<?php echo $view->getThemePath()?>/css/bootstrap-modified.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <?php echo $html->css($view->getStylesheet('main.less')) ?>
     <?php
     View::element('header_required', [
@@ -25,16 +26,13 @@
         }
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<!---
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
---->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
     <script src="/packages/usaid/themes/usaid/presentation-mode.js"></script>
     <script src="/packages/usaid/themes/usaid/FileSaver.js"></script>
     <script src="/packages/usaid/themes/usaid/Blob.js"></script>
     <script src="/packages/usaid/themes/usaid/html-docx.js"></script>
     <script src="/packages/usaid/themes/usaid/jquery.panelslider.js"></script>
-    <script src="http://localhost:8080/hq.js"></script>
     <script src="/packages/usaid/themes/usaid/usaid.js"></script>
 	
     <style>
