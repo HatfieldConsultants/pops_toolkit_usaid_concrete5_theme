@@ -1,7 +1,15 @@
 ﻿$(function () {
   introJs().start()
-  displayContextModal()
   wordExport()
+  var loc = window.location; 
+  var imagesListFile = loc.protocol + '//' + loc.host + "/packages/usaid/themes/usaid/context_images.json.txt"
+  var jqxhr = $.getJSON(imagesListFile, function( data ) {
+      displayContextModal(data["contextImages"]["pathImage"])
+  })
+    .fail(function() {
+        console.log("Could not find/load " + imagesListFile)
+    })
+  //displayContextModal()
 });
 
 function wordExport() {
@@ -50,16 +58,13 @@ function wordExport() {
 //}
 
 // displayContextModal adds a button on the right-hand-side to show the progress/context diagram in a modal dialog.
-function displayContextModal() {
+function displayContextModal(imagePathArr) {
     if ($('li.ccm-toolbar-page-edit-mode-active').length) return
 
     var content;
 
     // Load the progress/context image for certain URLs.
-    // TODO: Put this list into a JSON file and turn off caching for the JSON file.
-    var pathImages = [ { pathContains: "/data-collection-process-2/", 
-            imgPath: "/packages/usaid/themes/usaid/images/Data_Collection_Diagram_simplified_v0.2.jpg" }
-    ];
+    var pathImages = imagePathArr;
     var len;
     var loc = window.location;
     var i;

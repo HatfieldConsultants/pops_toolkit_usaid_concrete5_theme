@@ -1,0 +1,12 @@
+{"contextImages": {
+	"pathImage": [
+	    {"pathContains": "/planning/",
+			"imgPath": "/packages/usaid/themes/usaid/images/Pre-Assessment_v0.1.jpg"},
+		{"pathContains": "/risk-assessment/",
+			"imgPath": "/packages/usaid/themes/usaid/images/Risk_Assessment_Framework_v0.4.jpg"},
+		{"pathContains": "/riskmanagement/",
+			"imgPath": "/packages/usaid/themes/usaid/images/Risk_Management_v0.1.jpg"},	
+		{ "pathContains": "/data-collection-process-2/", 
+            "imgPath": "/packages/usaid/themes/usaid/images/Data_Collection_Diagram_simplified_v0.2.jpg" }
+	]
+}}
