@@ -49,27 +49,59 @@ function wordExport() {
 //  })
 //}
 
-//// displayContextModal adds a button on the right-hand-side to show the progress/context diagram in a modal dialog.
+// displayContextModal adds a button on the right-hand-side to show the progress/context diagram in a modal dialog.
 function displayContextModal() {
     if ($('li.ccm-toolbar-page-edit-mode-active').length) return
 
-    var $content = $('#context img')
-    if (!$content.length) return
+    var content;
 
-    // Modal block
-    $('<div id="contextModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contextLabel">' + 
-        '<div class="modal-dialog" role="document">' +
-            '<div class="modal-content">' +
-                '<div class="modal-header">' +
-                    '<button type="button" class="close" data-dismiss="modal" ' +
-                        'aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                    '<h4 class="modal-title" id="contextLabel"></h4>' +
-                '</div><!-- .modal-header -->' +
-                '<div class="modal-body"></div>' +
-            '</div><!-- .modal-content -->' +
-        '</div><!-- .modal-dialog -->' +
-       '</div><!-- .modal #contextModal -->').appendTo('body')
-    $('main').css('position', 'relative').
-        append('<div class="pullout"><a class="pullout-tab" data-toggle="modal" data-target="#contextModal"></a></div>')
-    $content.appendTo('#contextModal div .modal-body');
+    // Load the progress/context image for certain URLs.
+    // TODO: Put this list into a JSON file and turn off caching for the JSON file.
+    var pathImages = [ { pathContains: "/data-collection-process-2/", 
+            imgPath: "/packages/usaid/themes/usaid/images/Data_Collection_Diagram_simplified_v0.2.jpg" }
+    ];
+    var len;
+    var loc = window.location;
+    var i;
+    var pathCheck;
+    var regex;
+    var isFound;
+    var imgPath;
+    var $img;
+
+    // Loop to check all elements of array to see if it is a matching URL path.
+    len = pathImages.length;
+    for (i = 0; i < len; i += 1){
+        pathCheck = pathImages[i];
+        regex = new RegExp(pathCheck.pathContains, 'i');
+        isFound = regex.test(loc.pathname);
+        if (isFound){ break; }
+    } // end check for URL path that requires popover image.
+    
+    // Add the modal block and popover button.
+    if (isFound){
+        imgPath = loc.protocol + '//' + loc.host + pathCheck.imgPath;
+        $img = $('<img src="'+ imgPath +'" />');
+        content = $img;
+    
+        // Modal block
+        var $modal = $('<div id="contextModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contextLabel">' + 
+            '<div class="modal-dialog" role="document">' +
+                '<div class="modal-content">' +
+                    '<div class="modal-header">' +
+                        '<button type="button" class="close" data-dismiss="modal" ' +
+                            'aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+                        '<h4 class="modal-title" id="contextLabel"></h4>' +
+                    '</div><!-- .modal-header -->' +
+                    '<div class="modal-body">' + 
+                    // content goes in here...
+                    '</div>' + 
+                '</div><!-- .modal-content -->' +
+            '</div><!-- .modal-dialog -->' +
+           '</div><!-- .modal #contextModal -->');
+        $modal.find('.modal-body').append(content);
+        $modal.appendTo('body');
+        $('main').css('position', 'relative').
+            append('<div class="pullout"><a class="pullout-tab" data-toggle="modal" data-target="#contextModal"></a></div>')
+    } // end if adding modal popover and 'show' button.
 }
